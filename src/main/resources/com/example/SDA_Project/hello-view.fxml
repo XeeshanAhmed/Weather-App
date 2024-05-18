@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="app" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SDA_Project.HelloController">
+   <children>
+      <Label layoutX="55.0" layoutY="20.0" text="WeatherApp">
+         <font>
+            <Font name="Microsoft PhagsPa Bold" size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="myChoiceBox" layoutX="461.0" layoutY="16.0" onAction="#changeSearch" prefWidth="150.0" />
+      <TextField fx:id="longit" layoutX="620.0" layoutY="16.0" prefHeight="25.0" prefWidth="69.0" promptText="Logitude" />
+      <TextField fx:id="latit" layoutX="700.0" layoutY="16.0" prefHeight="25.0" prefWidth="69.0" promptText="Latitude" />
+      <TextField fx:id="city" layoutX="620.0" layoutY="16.0" promptText="City Name" />
+      <Button fx:id="search_btn" layoutX="777.0" layoutY="16.0" mnemonicParsing="false" onAction="#Search">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="816.0" layoutY="16.0" mnemonicParsing="false" onAction="#notification">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@notification.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="w_for" layoutX="352.0" layoutY="64.0" text="Weather For ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="city_name" layoutX="455.0" layoutY="64.0" text="City_Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.2043918918918919" layoutX="56.0" layoutY="121.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p1" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="58.0" layoutY="5.0" text="Current Condition">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <ImageView fx:id="temp_icon" fitHeight="35.0" fitWidth="35.0" layoutX="51.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="temp" layoutX="91.0" layoutY="7.0" text="TEMP" textAlignment="RIGHT">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="170.0" layoutY="6.0" text="°C">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main" layoutX="5.0" layoutY="56.0" text="MAIN" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descrip" layoutX="103.0" layoutY="55.0" text="DESCRIP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="wind" layoutX="5.0" layoutY="85.0" text="WIN" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="humid" layoutX="193.0" layoutY="85.0" text="HU" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="press" layoutX="4.0" layoutY="113.0" text="PRESS" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="visib" layoutX="192.0" layoutY="114.0" text="V" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main6" layoutX="105.0" layoutY="84.0" text="Humidity:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="219.0" layoutY="84.0" text="\%">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main61" layoutX="106.0" layoutY="112.0" text="Visibility:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="212.0" layoutY="114.0" text="KM">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="84.0" text="m/s N">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="113.0" text="h Pa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1942567567567568" layoutX="329.0" layoutY="122.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p2" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="83.0" layoutY="5.0" text="Basic Info">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="27.0" text="Feels Like: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="71.0" text="Min Temperature: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="109.0" text="Max Temperature: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="feels_like" layoutX="143.0" layoutY="27.0" text="FEELS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min_temp" layoutX="172.0" layoutY="71.0" text="TEMP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max_temp" layoutX="172.0" layoutY="109.0" text="TEMP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="27.0" text="°C">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="209.0" layoutY="71.0" text="°C">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="209.0" layoutY="109.0" text="°C">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="24.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@minTemp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="25.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@maxTemp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1942567567567568" layoutX="605.0" layoutY="121.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p3" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="56.0" layoutY="5.0" text="Sun Rise &amp; Sun Set">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <Label layoutX="51.0" layoutY="33.0" text="Sun Rise Time: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="82.0" text="Sun Set Time: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="srt" layoutX="166.0" layoutY="33.0" text="Sun_Rise">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sst" layoutX="160.0" layoutY="82.0" text="Sun_Set">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="17.0" fitWidth="55.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sunset.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="55.0" layoutX="-2.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sunrise.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1942567567567568" layoutX="55.0" layoutY="337.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p4" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="54.0" layoutY="6.0" text="ForeCast for 5 Days">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <Label fx:id="date1" layoutX="3.0" layoutY="11.0" text="DATE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max1" layoutX="105.0" layoutY="10.0" text="MAX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min1" layoutX="145.0" layoutY="10.0" text="MIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="10.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main1" layoutX="202.0" layoutY="11.0" text="MAIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date2" layoutX="3.0" layoutY="39.0" text="DATE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max2" layoutX="105.0" layoutY="38.0" text="MAX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min2" layoutX="145.0" layoutY="38.0" text="MIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="38.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main2" layoutX="202.0" layoutY="39.0" text="MAIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date3" layoutX="3.0" layoutY="67.0" text="DATE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max3" layoutX="105.0" layoutY="66.0" text="MAX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min3" layoutX="145.0" layoutY="66.0" text="MIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="66.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main3" layoutX="202.0" layoutY="67.0" text="MAIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date4" layoutX="4.0" layoutY="98.0" text="DATE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max4" layoutX="106.0" layoutY="97.0" text="MAX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min4" layoutX="146.0" layoutY="97.0" text="MIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="97.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main4" layoutX="203.0" layoutY="98.0" text="MAIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date5" layoutX="4.0" layoutY="127.0" text="DATE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max5" layoutX="106.0" layoutY="126.0" text="MAX">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min5" layoutX="146.0" layoutY="126.0" text="MIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="126.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="main5" layoutX="203.0" layoutY="127.0" text="MAIN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1942567567567568" layoutX="328.0" layoutY="338.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p5" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="80.0" layoutY="5.0" text="Air Pollution">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="50.0" text="Air Quality Index &amp; Level:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="aqi" layoutX="51.0" layoutY="85.0" text="AQI" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="115.0" text="Timestamp:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time_stamp" layoutX="132.0" layoutY="115.0" text="DT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="poll_lev" layoutX="142.0" layoutY="85.0" text="LEVEL">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="poll_categ" layoutX="46.0" layoutY="17.0" text="POLLUTION_CATEG" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pollution.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1942567567567568" layoutX="604.0" layoutY="337.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="250.0">
+         <items>
+            <AnchorPane fx:id="p6" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="70.0" layoutY="4.0" text="Polluting Gases">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="226.0">
+               <children>
+                  <Label layoutX="17.0" layoutY="25.0" text="CO: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="25.0" text="NO:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="166.0" layoutY="25.0" text="NO2:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="67.0" text="O3:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="89.0" layoutY="67.0" text="SO2:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="156.0" layoutY="68.0" text="PM2.5:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="110.0" text="PM10:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="116.0" layoutY="111.0" text="NH3:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="co" layoutX="43.0" layoutY="25.0" text="CO">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="no" layoutX="127.0" layoutY="25.0" text="NO">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="no2" layoutX="202.0" layoutY="25.0" text="NO2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="o3" layoutX="38.0" layoutY="67.0" text="03">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="so2" layoutX="120.0" layoutY="67.0" text="SO2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pm2" layoutX="203.0" layoutY="68.0" text="PM2.5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pm10" layoutX="59.0" layoutY="110.0" text="PM10">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nh3" layoutX="150.0" layoutY="111.0" text="NH3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Pane fx:id="notif_pane" layoutX="647.0" layoutY="43.0" prefHeight="240.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="notif" layoutX="7.0" layoutY="6.0" text="Currently No notifications">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="notif_dot" layoutX="840.0" layoutY="15.0" text="⬤" textFill="RED">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

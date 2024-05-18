@@ -1,0 +1,26 @@
+TextField{
+    -fx-border-style: none;
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-effect: null;
+}
+Button{
+    -fx-background-color: #87ceea;
+}
+Button:hover{
+    -fx-background-color: #93c3ff;
+}
+SplitPane{
+    -fx-background-color: rgba(255,255,255,0.25);
+}
+#p1,#p2,#p3,#p4,#p5,#p6{
+    -fx-background-color: #87ceea;
+}
+#notif_pane{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+#notif{
+    -fx-text-fill: white;
+}
