@@ -32,5 +32,5 @@ Technologies used in the project:
 
 
 *   XeeshanAhmed
-*   github/awahab04
-*   github/muhammad2702
+*   @awahab04
+*   @muhammad2702
